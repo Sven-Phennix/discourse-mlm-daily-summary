@@ -8,8 +8,7 @@ module DiscourseMlmDailySummary
 
       require_dependency 'user_notifications'
       class ::UserNotifications
-                
-        def mailing_list(user, opts={})
+         def mailing_list(user, opts={})
           prepend_view_path "plugins/discourse-mlm-daily-summary/app/views"
 
           @since = opts[:since] || 1.day.ago
